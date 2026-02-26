@@ -1,0 +1,37 @@
+# ============================================================
+# CNN Module — Sentinel-2 Biomass Feature Extraction
+# Python 3.10+  |  Windows / Linux / macOS
+# ============================================================
+
+# ── Core ML ─────────────────────────────────────────────────
+torch>=2.0.0
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+tqdm>=4.65.0
+
+# ── Satellite Data — Backend 1: SentinelHub (paid, optional) ─
+# Sign up at https://www.sentinel-hub.com
+# Set env vars SH_CLIENT_ID and SH_CLIENT_SECRET
+sentinelhub>=3.9.0
+
+# ── Satellite Data — Backend 2: Planetary Computer (FREE) ───
+# No account required — used as automatic fallback
+pystac-client>=0.7.0
+planetary-computer>=1.0.0
+odc-stac>=0.3.6
+rasterio>=1.3.0
+
+# ── Visualisation (optional, for training curves) ────────────
+matplotlib>=3.7.0
+
+# ── Geospatial (used by buyer_matching.py in main pipeline) ──
+scipy>=1.11.0
+shapely>=2.0.0
+joblib>=1.3.0
+
+# ── Install command ──────────────────────────────────────────
+# pip install -r requirements.txt
+#
+# GPU (optional, significant training speedup):
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118

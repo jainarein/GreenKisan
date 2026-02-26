@@ -1,0 +1,31 @@
+farmer_id,lat,lon,biomass_tons_per_ha,predicted_aqi,burn_risk_label,burn_risk_class,burn_risk_confidence,health_impact_score,alert_flag,intervention_urgency,best_buyer_name,best_buyer_distance,best_buyer_net_rev,n_buyers_available
+FARMER_0012,32.2802949665458,76.880909325414,5.778,265.7,Critical,3,0.9973,53.65,True,CRITICAL ALERT: notify district authority + emergency biomass pickup,None,,,0
+FARMER_0014,31.96828483981249,74.95575657311355,5.767,222.6,High,2,0.9988,49.53,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Agri Compost Hub,38.0,15202.0,3
+FARMER_0024,32.179363363966594,76.25994816939051,0.918,466.7,High,2,0.9846,49.48,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Biogas Ludhiana,147.2,1256.0,3
+FARMER_0015,30.830242596481995,76.87936126516225,6.0,189.9,High,2,0.9982,46.19,True,"Urgent: dispatch field officer, offer same-day collection",Biomass Pellets Ambala,51.3,6403.0,9
+FARMER_0013,31.431595360241992,76.39098087740832,3.895,252.3,High,2,0.9993,42.89,True,"Urgent: dispatch field officer, offer same-day collection",Doaba Thermal Biomass,76.7,18168.0,8
+FARMER_0027,30.900163011181103,75.49798836949185,4.696,215.6,High,2,0.9985,42.54,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Biogas Ludhiana,34.3,35720.0,11
+FARMER_0019,31.982893515977747,76.32523336470742,3.203,282.3,High,2,0.9993,42.48,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Biogas Ludhiana,128.2,8889.0,4
+FARMER_0026,30.083916123555902,76.68869741478127,5.001,192.4,High,2,0.9987,41.5,True,"Urgent: dispatch field officer, offer same-day collection",Greenfield Biogas Patiala,40.6,49666.0,8
+FARMER_0018,29.691451768312525,74.8668139845419,4.058,210.1,High,2,0.9987,38.63,True,"Urgent: dispatch field officer, offer same-day collection",NTPC Bio-Energy Ramgarh,58.3,21575.0,4
+FARMER_0009,29.884340898026636,74.63956459148827,4.566,159.4,High,2,0.9981,36.04,True,"Urgent: dispatch field officer, offer same-day collection",NTPC Bio-Energy Ramgarh,46.8,10772.0,3
+FARMER_0005,29.782532043662947,75.53735650172048,5.219,142.6,High,2,0.998,35.83,True,"Urgent: dispatch field officer, offer same-day collection",NTPC Bio-Energy Ramgarh,74.3,26720.0,10
+FARMER_0029,29.962868476202644,74.31724889307233,3.477,199.6,High,2,0.9983,34.74,True,"Urgent: dispatch field officer, offer same-day collection",NTPC Bio-Energy Ramgarh,66.4,17077.0,3
+FARMER_0021,31.77426322025612,74.5396603491579,2.833,229.2,High,2,0.9986,34.67,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Agri Compost Hub,35.1,10318.0,4
+FARMER_0030,31.549146859727365,74.2237612720831,2.996,220.7,High,2,0.9983,34.63,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Agri Compost Hub,62.1,5598.0,4
+FARMER_0017,31.163754361047506,75.23367000241164,3.947,178.0,High,2,0.9979,34.26,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Dairy Cooperative,9.5,18515.0,9
+FARMER_0016,30.18171616535433,76.77762812273816,5.212,122.6,High,2,0.9984,33.83,True,"Urgent: dispatch field officer, offer same-day collection",Biomass Pellets Ambala,21.8,45832.0,8
+FARMER_0010,30.8511578136867,76.27831178032528,2.6,231.0,High,2,0.9879,33.56,True,"Urgent: dispatch field officer, offer same-day collection",Greenfield Biogas Patiala,57.8,16133.0,10
+FARMER_0007,31.78341910597106,74.28070956974125,4.145,155.0,High,2,0.998,32.92,True,"Urgent: dispatch field officer, offer same-day collection",Punjab Agri Compost Hub,58.4,7162.0,3
+FARMER_0022,30.563577904389604,73.82724039807871,3.222,154.7,Moderate,1,0.9994,27.97,False,Recommend alternative use: offer biomass collection subsidy,NTPC Bio-Energy Ramgarh,114.2,15288.0,2
+FARMER_0020,31.394993197366194,74.31708418935445,3.541,133.3,Moderate,1,0.9994,27.04,False,Recommend alternative use: offer biomass collection subsidy,Punjab Agri Compost Hub,59.0,6094.0,4
+FARMER_0003,32.07579375973415,75.00555382511116,3.335,130.6,Moderate,1,0.9994,25.96,False,Recommend alternative use: offer biomass collection subsidy,Punjab Agri Compost Hub,50.7,7849.0,2
+FARMER_0011,30.612394072697743,75.41746209982762,0.1,290.5,Moderate,1,0.9915,25.38,False,Recommend alternative use: offer biomass collection subsidy,Shreyans Paper Punjab,35.2,-480.0,11
+FARMER_0001,31.82186814566789,76.55561997685892,0.541,257.5,Moderate,1,0.998,25.24,False,Recommend alternative use: offer biomass collection subsidy,Doaba Thermal Biomass,111.7,2140.0,3
+FARMER_0002,30.816635319256157,77.37978601000658,2.053,180.2,Moderate,1,0.9993,25.02,False,Recommend alternative use: offer biomass collection subsidy,Biomass Pellets Ambala,75.6,4774.0,6
+FARMER_0006,32.42686705491027,74.50104402861186,4.798,20.0,Moderate,1,0.9948,21.39,False,Recommend alternative use: offer biomass collection subsidy,Punjab Agri Compost Hub,94.9,5119.0,1
+FARMER_0004,31.592104087178093,75.17070091232901,3.978,20.0,Moderate,1,0.9879,19.13,False,Recommend alternative use: offer biomass collection subsidy,Punjab Agri Compost Hub,28.6,17648.0,6
+FARMER_0025,31.835150491221285,76.40911190091744,2.0,117.5,Moderate,1,0.9994,17.8,False,Recommend alternative use: offer biomass collection subsidy,Doaba Thermal Biomass,102.2,11636.0,4
+FARMER_0028,29.631411297361687,75.9043424250257,3.451,34.0,Moderate,1,0.9948,17.14,False,Recommend alternative use: offer biomass collection subsidy,Haryana Green Power,48.7,13478.0,9
+FARMER_0023,32.41209407318471,76.7116201967579,2.079,70.9,Moderate,1,0.9987,12.82,False,Recommend alternative use: offer biomass collection subsidy,None,,,0
+FARMER_0008,31.858192915830863,75.56010822703595,1.51,82.2,Low,0,0.796,11.18,False,No immediate action — monitor weekly,None,,,0
