@@ -27,17 +27,7 @@ All modules are connected through a structured pipeline.
 ---
 
 # 🧠 System Workflow
-Sentinel‑2 Satellite Image
-↓
-CNN → Biomass + 128‑dim Embedding
-↓
-LSTM → AQI Forecast
-↓
-XGBoost → Burn Risk Probability
-↓
-Buyer Matching Logic
-↓
-Frontend Dashboard
+Sentinel‑2 Satellite Image -> CNN → Biomass + 128‑dim Embedding -> LSTM → AQI Forecast -> XGBoost → Burn Risk Probability -> Buyer Matching Logic -> Frontend Dashboard
 
 
 ---
@@ -112,13 +102,14 @@ GreenKisan/
 
 ### Train CNN
 
-```bash
+bash
 cd CNN/files
 pip install -r requirements.txt
 python train_cnn.py
 Run Inference
 python inference.py
-2️⃣ LSTM – AQI Forecasting
+
+**###LSTM – AQI Forecasting**
 Input:
 
 Historical AQI
@@ -134,7 +125,7 @@ cd LSTM
 python train.py
 Evaluate
 python evaluate.py
-3️⃣ XGBoost – Burn Risk & Decision Layer
+**###XGBoost – Burn Risk & Decision Layer**
 Input:
 
 CNN embedding
