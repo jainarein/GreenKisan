@@ -33,49 +33,30 @@
 ## System Architecture
 
 ```
-+---------------------+
-|   Sentinel-2 Input  |
-|  B02, B03, B04, B08 |
-|   128x128 patches   |
-+----------+----------+
-           |
-           v
-+----------+----------+
-|     CNN Module      |
-|  Biomass Estimation |
-|  Output:            |
-|  - Biomass (t/ha)   |
-|  - 128-d Embedding  |
-+----+----------+-----+
-     |          |
-     |          v
-     |  +-------+-------+
-     |  |  LSTM Module  |
-     |  | AQI Forecast  |
-     |  | Input:        |
-     |  | - Hist. AQI   |
-     |  | - CNN Embed.  |
-     |  +-------+-------+
-     |          |
-     v          v
-+----+----------+-----+
-|   XGBoost Module    |
-|  Burn Risk + Buyer  |
-|  Matching           |
-|  Input:             |
-|  - CNN Embedding    |
-|  - LSTM Output      |
-|  Output:            |
-|  - Burn Risk Prob.  |
-|  - Buyer Match      |
-+----------+----------+
-           |
-           v
-+----------+----------+
-|   React Frontend    |
-|  Dashboard / UI     |
-|  localhost:5173     |
-+---------------------+
+Farmer (Mobile/Web App)
+        │
+        ▼
+Enter GPS Location (Lat, Lon)
+        │
+        ▼
+FastAPI Backend
+        │
+        ▼
+Sentinel‑2 Image Fetch (Cloud < 20%)
+        │
+        ▼
+CNN Model (Biomass + 128D Embedding)
+        │
+        ├──────────────► LSTM (AQI Forecast)
+        │
+        ▼
+XGBoost (Burn Risk Prediction)
+        │
+        ▼
+Decision & Buyer Matching
+        │
+        ▼
+Frontend Dashboard Output
 ```
 
 ---
@@ -84,15 +65,11 @@
 
 **Login — BioSphere Authentication Portal**
 
-![Login Screen](./assets/screenshots/login.jpeg)
-
 Multilingual authentication interface supporting English, Hindi, and Punjabi. Entry point to the BioSphere platform with secure credential-based access.
 
 ---
 
 **Farmer Intelligence Center — Dashboard**
-
-![Dashboard](./assets/screenshots/dashboard.jpeg)
 
 Farmer-facing intelligence dashboard displaying real-time CNN-derived biomass output (Detected Residue: 14.2 t/ha), verified field area (45.5 Acres), projected earnings (Rs. 42,500), and a live biomass output progress tracker. Supports multilingual UI and bottom-navigation for Home, Market, Dashboard, and Profile modules.
 
@@ -265,9 +242,9 @@ cd CNN
 source venv/bin/activate
 python train.py \
   --data_dir ./data/sentinel2_patches \
-  --epochs 100 \
-  --batch_size 32 \
-  --lr 1e-4 \
+  --epochs 128 \
+  --batch_size 8 \
+  --lr 5e-4 \
   --output_dir ./checkpoints
 ```
 
@@ -394,7 +371,7 @@ joblib.dump(model, './export/burn_risk_model_prod.pkl', compress=3)
 | Module         | Metric   | Value        |
 |----------------|----------|--------------|
 | CNN (Biomass)  | R²       | ~0.85        |
-| CNN (Biomass)  | RMSE     | ~1.5 t/ha    |
+| CNN (Biomass)  | RMSE     | ~0.44 t/ha    |
 | LSTM (AQI)     | MAE      | Evaluated on holdout set |
 | XGBoost        | AUC-ROC  | Evaluated on burn risk test set |
 
