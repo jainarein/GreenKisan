@@ -1,22 +1,8 @@
-# Virtual environments
+cnn_env/
 venv/
-*/venv/
-
-# Python cache
 __pycache__/
 *.pyc
-
-# Model weights
-*.pt
 *.pth
-*.h5
-
-# Checkpoints
-checkpoints/
-
-# Large DLLs
-*.dll
-
-# Dataset
-data/
-datasets/
+*.pkl
+.antigravity/
+node_modules/
